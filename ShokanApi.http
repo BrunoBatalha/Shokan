@@ -1,0 +1,6 @@
+@ShokanApi_HostAddress = http://localhost:5242
+
+GET {{ShokanApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
