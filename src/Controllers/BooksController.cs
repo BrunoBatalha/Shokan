@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ShokanApi.Models;
 
 namespace ShokanApi.Controllers
 {
@@ -69,7 +70,7 @@ namespace ShokanApi.Controllers
         // POST: api/Books
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Book>> PostBook(BookDto bookDto)
+        public async Task<ActionResult<Book>> CreateBook(BookDto bookDto)
         {
             var book = new Book { Name = bookDto.Name };
             _context.Books.Add(book);
